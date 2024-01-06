@@ -13,13 +13,15 @@ class PeopleSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('people')->insert([
-            'name' => 'John',
-            'surename' => 'Smith',
-            'phoneNumber' => '123123123',
-            'street' => 'Groove',
-            'city' => 'Dull',
-            'country' => 'San-Escobar'
-        ]);
+        for ($i = 0; $i < 200; $i++) {
+            DB::table('people')->insert([
+                'name' => fake()->firstName(),
+                'surename' => fake()->lastName(),
+                'phoneNumber' => fake()->phoneNumber(),
+                'street' => fake()->streetName(),
+                'city' => fake()->city(),
+                'country' => fake()->country()
+            ]);
+        }
     }
 }
