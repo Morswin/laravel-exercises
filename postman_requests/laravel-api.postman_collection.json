@@ -13,7 +13,13 @@
 			},
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": "",
@@ -39,6 +45,186 @@
 						"313030",
 						"people",
 						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/powezka/313030/people/?name=Stefan&surename=Kowalski&phoneNumber=123123123&street=Butterfly&city=New City&country=Old Country",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/powezka/313030/people/?name=Stefan&surename=Kowalski&phoneNumber=123123123&street=Butterfly&city=New City&country=Old Country",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"powezka",
+						"313030",
+						"people",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Stefan"
+						},
+						{
+							"key": "surename",
+							"value": "Kowalski"
+						},
+						{
+							"key": "phoneNumber",
+							"value": "123123123"
+						},
+						{
+							"key": "street",
+							"value": "Butterfly"
+						},
+						{
+							"key": "city",
+							"value": "New City"
+						},
+						{
+							"key": "country",
+							"value": "Old Country"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/powezka/313030/people/21",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/powezka/313030/people/21",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"powezka",
+						"313030",
+						"people",
+						"21"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/powezka/313030/people/21?name=ChangedName&surename=ChangedSurename&phoneNumber=000000000&street=ChangedStreet&city=ChangedCity&country=ChangedCountry",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/powezka/313030/people/21?name=ChangedName&surename=ChangedSurename&phoneNumber=000000000&street=ChangedStreet&city=ChangedCity&country=ChangedCountry",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"powezka",
+						"313030",
+						"people",
+						"21"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "ChangedName"
+						},
+						{
+							"key": "surename",
+							"value": "ChangedSurename"
+						},
+						{
+							"key": "phoneNumber",
+							"value": "000000000"
+						},
+						{
+							"key": "street",
+							"value": "ChangedStreet"
+						},
+						{
+							"key": "city",
+							"value": "ChangedCity"
+						},
+						{
+							"key": "country",
+							"value": "ChangedCountry"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/powezka/313030/people/21",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/powezka/313030/people/21",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"powezka",
+						"313030",
+						"people",
+						"21"
 					]
 				}
 			},

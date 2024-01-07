@@ -49,6 +49,6 @@ class PeopleController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        DB::delete('DELETE FROM people WHERE id = ?', [$id]);
     }
 }
