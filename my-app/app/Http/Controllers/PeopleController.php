@@ -3,15 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\JsonResponse;
+use App\Models\People;
+use Illuminate\Support\Facades\DB;
 
 class PeopleController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(): JsonResponse
     {
-        //
+        // $people = DB::select('select * from people');
+        // echo $people;
+        return response()->json(['name'=>'Test']);
     }
 
     /**
