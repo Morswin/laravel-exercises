@@ -16,7 +16,7 @@ class PeopleController extends Controller
     {
         // $people = DB::select('select * from people');
         // echo $people;
-        return response()->json(['name'=>'Test']);
+        return response()->json(People::all());
     }
 
     /**
