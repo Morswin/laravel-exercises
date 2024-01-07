@@ -14,8 +14,6 @@ class PeopleController extends Controller
      */
     public function index(): JsonResponse
     {
-        // $people = DB::select('select * from people');
-        // echo $people;
         return response()->json(People::all());
     }
 
@@ -24,7 +22,8 @@ class PeopleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $person = new People($request->all());
+        $person->save();
     }
 
     /**
