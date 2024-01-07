@@ -31,7 +31,7 @@ class PeopleController extends Controller
      */
     public function show(string $id)
     {
-        //
+        return response()->json(People::find($id));
     }
 
     /**
@@ -39,7 +39,9 @@ class PeopleController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $person = People::find($id);
+        $person->update($request->all());
+        $person->save();
     }
 
     /**
